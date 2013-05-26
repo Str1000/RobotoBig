@@ -103,7 +103,7 @@ void unload_digit_image_from_slot(int slot_number) {
 }
 
 void check_and_change(unsigned short digit, unsigned short slot_number, bool hide) {
-	if (hide && (image_slot_state[slot_number] != EMPTY_SLOT)) {
+	if (hide) {
 		unload_digit_image_from_slot(slot_number);
 		return;
 	}
