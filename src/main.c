@@ -6,7 +6,7 @@
 #include "resource_ids.auto.h"
 
 #define MY_UUID { 0xBE, 0x94, 0xEE, 0xE9, 0xB2, 0xAF, 0x47, 0xF5, 0x86, 0xC7, 0x5E, 0x44, 0xC2, 0xDA, 0x0F, 0xC5 }
-PBL_APP_INFO(MY_UUID, "Roboto Big", "Tom Svoboda", 0, 1, RESOURCE_ID_IMAGE_MENU_ICON, APP_INFO_WATCH_FACE);
+PBL_APP_INFO(MY_UUID, "Roboto Big", "Tom Svoboda", 1, 0, RESOURCE_ID_IMAGE_MENU_ICON, APP_INFO_WATCH_FACE);
 
 
 
