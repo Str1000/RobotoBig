@@ -186,8 +186,8 @@ void handle_init(AppContextRef ctx) {
 
   window_init(&window, "RobotoBig watch");
   window_stack_push(&window, true);
-  window_set_background_color(&window, GColorBlack);
-  graphics_context_set_fill_color(ctx, GColorWhite);
+  window_set_background_color(&window, BACK_COLOR);
+  graphics_context_set_fill_color(ctx, FRONT_COLOR);
 	
   resource_init_current_app(&APP_RESOURCES);
 	

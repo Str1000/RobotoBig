@@ -16,13 +16,13 @@ void display_box(struct Layer *l, GContext *ctx) {
 	while(&box_layer[i] != l) { //to find out which box we are updating
 		i++;
 		if(i == NUMBER_OF_BOXES) {
-        graphics_context_set_fill_color(ctx, GColorWhite);
+        graphics_context_set_fill_color(ctx, FRONT_COLOR);
         graphics_fill_rect(ctx, GRect(0,0, SECONDS_BOX/2, SECONDS_BOX/2), 0, GCornerNone); //ERROR! shown by half square
 		return;
 		}
 	}
 	if (show_box[i]) {
-        graphics_context_set_fill_color(ctx, GColorWhite);
+        graphics_context_set_fill_color(ctx, FRONT_COLOR);
         graphics_fill_rect(ctx, GRect(0,0, SECONDS_BOX, SECONDS_BOX), 0, GCornerNone);
     }
 }
