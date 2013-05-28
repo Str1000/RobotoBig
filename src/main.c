@@ -6,7 +6,7 @@
 #include "resource_ids.auto.h"
 
 #define MY_UUID { 0xBE, 0x94, 0xEE, 0xE9, 0xB2, 0xAF, 0x47, 0xF5, 0x86, 0xC7, 0x5E, 0x44, 0xC2, 0xDA, 0x0F, 0xC5 }
-PBL_APP_INFO(MY_UUID, "Roboto Big", "Tom Svoboda", 1, 0, RESOURCE_ID_IMAGE_MENU_ICON, APP_INFO_WATCH_FACE);
+PBL_APP_INFO(MY_UUID, "Roboto Big", "Tom Svoboda", 2, 0, RESOURCE_ID_IMAGE_MENU_ICON, APP_INFO_WATCH_FACE);
 
 
 
@@ -187,10 +187,11 @@ void handle_init(AppContextRef ctx) {
   window_init(&window, "RobotoBig watch");
   window_stack_push(&window, true);
   window_set_background_color(&window, GColorBlack);
-	
-  seconds_init();
+  graphics_context_set_fill_color(ctx, GColorWhite);
 	
   resource_init_current_app(&APP_RESOURCES);
+	
+  seconds_init();
 
   // Avoids a blank screen on watch start.
   PblTm tick_time;
@@ -204,7 +205,7 @@ void handle_init(AppContextRef ctx) {
 void handle_deinit(AppContextRef ctx) {
   (void)ctx;
 
-  for (int i = 0; i < TOTAL_IMAGE_SLOTS; i++) {
+  for (uint8_t i = 0; i < TOTAL_IMAGE_SLOTS; i++) {
     unload_digit_image_from_slot(i);
   }
 
