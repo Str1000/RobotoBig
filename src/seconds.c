@@ -57,7 +57,7 @@ void seconds_init() {
 	layer_mark_dirty(&seconds_bar);
 	//initialising layers representing 5 second' box each (11 boxes = layers 0-10)
 	for(uint8_t i=0;i<NUMBER_OF_BOXES;i++) {
-		layer_init(&box_layer[i], GRect(SECONDS_PADDING, SECONDS_PADDING+ i*(SECONDS_SPACE+SECONDS_BOX), SECONDS_BOX, SECONDS_BOX)); //layer 0 doesn't exist
+		layer_init(&box_layer[i], GRect(SECONDS_PADDING, SECONDS_PADDING+ i*(SECONDS_SPACE+SECONDS_BOX), SECONDS_BOX, SECONDS_BOX));
 		layer_set_update_proc(&box_layer[i], &display_box);
 	} 
 	//finilised on first display with access to seconds var
