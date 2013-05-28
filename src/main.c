@@ -107,7 +107,7 @@ void check_and_change(unsigned short digit, unsigned short slot_number, bool hid
 		unload_digit_image_from_slot(slot_number);
 		return;
 	}
-	else if (image_slot_state[slot_number] != digit) {
+	else if (image_slot_state[slot_number] != digit) { //change digit only if it changes
 		unload_digit_image_from_slot(slot_number);
 		load_digit_image_into_slot(slot_number, digit);
 		return;
